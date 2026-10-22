@@ -1,0 +1,458 @@
+{
+  "title": "Khóa Học Giá Hời - Share khóa học giá rẻ, uy tín, chất lượng",
+  "description": "Khám phá hàng ngàn khóa học online chất lượng thuộc nhiều lĩnh vực với mức giá tốt, nhận khóa học nhanh chóng và hỗ trợ tận tâm tại Khóa Học Giá Hời.",
+  "logo": "https://res.cloudinary.com/ponfcsow/image/upload/v1789481840/khoahocgiahoi/static/logo.png",
+  "css_files": [
+    "/_next/static/css/b63708fea0b97aa6.css",
+    "/_next/static/css/0c1461d35d05be91.css",
+    "/_next/static/css/1b26f373a62fb7aa.css",
+    "/_next/static/css/f0fb66a2b3fed81e.css",
+    "/_next/static/css/4c3f17415e29cd31.css",
+    "/_next/static/css/d71a9ee484034e35.css"
+  ],
+  "banners": [
+    {
+      "src": "https://res.cloudinary.com/dcjhupnyv/image/upload/v1789481854/khoahocgiahoi/static/599k_1.webp",
+      "alt": "Gói trọn bộ hơn 2000 khóa học",
+      "href": "/khoa-hoc/tron-bo-khoa-hoc-tren-website-voi-quyen-truy-cap-vinh-vien-and-cap-nhat-lien-tuc"
+    },
+    {
+      "src": "https://res.cloudinary.com/dhpgpxwyi/image/upload/v1789481849/khoahocgiahoi/static/affiliate-program-banner.webp",
+      "alt": "Giới thiệu khóa học và nhận hoa hồng Affiliate",
+      "href": "/chinh-sach-affiliate"
+    },
+    {
+      "src": "https://res.cloudinary.com/dubcgtfky/image/upload/v1789481851/khoahocgiahoi/static/introduce_khgh.webp",
+      "alt": "Giới thiệu kho khóa học Giá Hời",
+      "href": "/khoa-hoc/tron-bo-khoa-hoc-tren-website-voi-quyen-truy-cap-vinh-vien-and-cap-nhat-lien-tuc"
+    },
+    {
+      "src": "https://res.cloudinary.com/dkf0xygyr/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1792297608/courses/khoa-hoc-video-ai-affiliate-thuc-chien-cung-minh-duong-thumbnail.jpg",
+      "alt": "Khóa Học Video AI Affiliate Thực Chiến Cùng Minh Dương",
+      "href": "/khoa-hoc/khoa-hoc-video-ai-affiliate-thuc-chien-cung-minh-duong"
+    },
+    {
+      "src": "https://res.cloudinary.com/dcvlmovez/image/upload/v1789481859/khoahocgiahoi/static/special-offer-banner.png",
+      "alt": "Deal Banner",
+      "href": ""
+    }
+  ],
+  "categories": [
+    {
+      "name": "Combo Khóa Học",
+      "href": "/danh-muc/combo-khoa-hoc"
+    },
+    {
+      "name": "Khóa học Youtube",
+      "href": "/danh-muc/khoa-hoc-youtube"
+    },
+    {
+      "name": "Công nghệ thông tin",
+      "href": "/danh-muc/cong-nghe-thong-tin"
+    },
+    {
+      "name": "Kiếm tiền và MMO",
+      "href": "/danh-muc/kiem-tien-va-mmo"
+    },
+    {
+      "name": "Ngoại ngữ",
+      "href": "/danh-muc/ngoai-ngu"
+    },
+    {
+      "name": "Thiết kế đồ họa",
+      "href": "/danh-muc/thiet-ke-djo-hoa"
+    },
+    {
+      "name": "Marketing",
+      "href": "/danh-muc/marketing"
+    },
+    {
+      "name": "Tin học văn phòng",
+      "href": "/danh-muc/tin-hoc-van-phong"
+    },
+    {
+      "name": "Đầu tư",
+      "href": "/danh-muc/djau-tu"
+    },
+    {
+      "name": "Dựng phim & nhiếp ảnh",
+      "href": "/danh-muc/dung-phim-va-nhiep-anh"
+    },
+    {
+      "name": "Kinh doanh & khởi nghiệp",
+      "href": "/danh-muc/kinh-doanh-va-khoi-nghiep"
+    },
+    {
+      "name": "Kỹ năng",
+      "href": "/danh-muc/ky-nang"
+    },
+    {
+      "name": "Khóa học Facebook",
+      "href": "/danh-muc/khoa-hoc-facebook"
+    },
+    {
+      "name": "Khóa Học Tiktok",
+      "href": "/danh-muc/khoa-hoc-tiktok"
+    },
+    {
+      "name": "Khóa học khác",
+      "href": "/danh-muc/khoa-hoc-khac"
+    },
+    {
+      "name": "Công nghệ & Lập trìnhWebsite, ứng dụng, dữ liệu và công nghệ92 khóa học",
+      "href": "/danh-muc/lap-trinh-web"
+    },
+    {
+      "name": "Xem tất cả",
+      "href": "/danh-muc/vibe-coding"
+    },
+    {
+      "name": "Xem tất cả",
+      "href": "/danh-muc/tri-tue-nhan-tao"
+    }
+  ],
+  "course_count": 36,
+  "courses": [
+    {
+      "href": "/khoa-hoc/tron-bo-khoa-hoc-tren-website-voi-quyen-truy-cap-vinh-vien-and-cap-nhat-lien-tuc",
+      "title": "✨ Trọn bộ 2.000+ khóa học — Truy cập trọn đời, cập nhật miễn phí, chỉ599KXem ngay",
+      "image": "https://res.cloudinary.com/ponfcsow/image/upload/v1789481840/khoahocgiahoi/static/logo.png",
+      "prices": [],
+      "rating": "0",
+      "raw_text": [
+        "✨ Trọn bộ 2.000+ khóa học — Truy cập trọn đời, cập nhật miễn phí, chỉ",
+        "599K",
+        "Xem ngay",
+        "Danh mục",
+        "Danh mục khóa học",
+        "Combo Khóa Học",
+        "Khóa học Youtube",
+        "Công nghệ thông tin",
+        "Kiếm tiền và MMO",
+        "Ngoại ngữ",
+        "Thiết kế đồ họa",
+        "Marketing",
+        "Tin học văn phòng",
+        "Đầu tư",
+        "Dựng phim & nhiếp ảnh",
+        "Kinh doanh & khởi nghiệp",
+        "Kỹ năng",
+        "Khóa học Facebook",
+        "Khóa Học Tiktok",
+        "Khóa học khác",
+        "Xem tất cả khóa học",
+        "Tìm",
+        "0",
+        "0",
+        "Bán chạy",
+        "Mới cập nhật",
+        "Combo tiết kiệm",
+        "Công cụ",
+        "Mới",
+        "Hội viên",
+        "Mới",
+        "Trọn bộ khóa học",
+        "Hướng dẫn mua",
+        "Zalo hỗ trợ:",
+        "0583 953 426"
+      ]
+    },
+    {
+      "href": "/khoa-hoc/lap-trinh-java-va-sql-28tech-2024",
+      "title": "",
+      "image": "https://res.cloudinary.com/ejq0ppqi/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1783524875/lap-trinh-java-va-sql-28tech-2024-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": [
+        "−5%"
+      ]
+    },
+    {
+      "href": "/khoa-hoc/khoa-claude-ai-training-ts-lai-tuan-dung-dung-lai-lap-trinh-huan-luyen-claude-ai-cho-cong-viec",
+      "title": "",
+      "image": "https://res.cloudinary.com/ds063chqq/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1780490500/khoa-claude-ai-training-ts-lai-tuan-dung-dung-lai-lap-trinh-huan-luyen-claude-ai-cho-cong-viec-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": [
+        "−9%"
+      ]
+    },
+    {
+      "href": "/khoa-hoc/combo-3-module-khoa-hoc-mlops-cung-full-stack-data-science",
+      "title": "",
+      "image": "https://res.cloudinary.com/vmxg9iif/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1784034096/combo-3-module-khoa-hoc-mlops-cung-full-stack-data-science-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": [
+        "−6%"
+      ]
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-vibe-coding-lap-trinh-ai-le-bach-hiep",
+      "title": "",
+      "image": "https://res.cloudinary.com/dkahlxfjl/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1780971923/khoa-hoc-vibe-coding-lap-trinh-ai-le-bach-hiep-thumbnail-image.png",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": [
+        "−8%"
+      ]
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-tieng-trung-yangdexin-hoc-tu-goc-djen-hsk6",
+      "title": "",
+      "image": "https://res.cloudinary.com/dclz8lfyb/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1784199161/khoa-hoc-tieng-trung-yangdexin-hoc-tu-goc-djen-hsk6-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": [
+        "−9%"
+      ]
+    },
+    {
+      "href": "/khoa-hoc/tron-bo-khoa-hoc-google-ads-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi",
+      "title": "",
+      "image": "https://res.cloudinary.com/ojvlb5mn/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1784044289/tron-bo-khoa-hoc-google-ads-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": [
+        "−9%"
+      ]
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-advanced-backend-moi-nhat-cung-roninhub",
+      "title": "",
+      "image": "https://res.cloudinary.com/dclz8lfyb/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1783957831/khoa-hoc-advanced-backend-moi-nhat-cung-roninhub-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": [
+        "−5%"
+      ]
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-facebook-ads-chu-minh-hanh-level-1-chuyen-sau-2025",
+      "title": "",
+      "image": "https://res.cloudinary.com/ds063chqq/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1780490745/khoa-hoc-facebook-ads-chu-minh-hanh-level-1-chuyen-sau-2025-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": [
+        "−10%"
+      ]
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-khoa-hoc-du-lieu-va-tri-tue-nhan-tao-aio-2025-cung-aivietnam",
+      "title": "",
+      "image": "https://res.cloudinary.com/ddofotdbq/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1783586703/khoa-hoc-khoa-hoc-du-lieu-va-tri-tue-nhan-tao-aio-2025-cung-aivietnam-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/combo-14-khoa-hoc-lap-trinh-28tech-2023-2024",
+      "title": "",
+      "image": "https://res.cloudinary.com/igamdydo/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1784389571/combo-14-khoa-hoc-lap-trinh-28tech-2023-2024-thumbnail-image.png",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/combo-5-khoa-hoc-lap-trinh-viet-nguyen-ai",
+      "title": "",
+      "image": "https://res.cloudinary.com/ddofotdbq/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1784646944/combo-5-khoa-hoc-lap-trinh-viet-nguyen-ai-thumbnail.png",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/tool-tai-video-google-drive-bi-chan-tai",
+      "title": "",
+      "image": "https://res.cloudinary.com/dp6afut6m/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1780297703/tool-tai-video-google-drive-bi-chan-tai-thumbnail.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/combo-8-khoa-hoc-vibe-coding-thuc-chien-lam-chu-ai-and-lap-trinh-hien-djai",
+      "title": "",
+      "image": "https://res.cloudinary.com/lbzw9jmn/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1784389593/combo-8-khoa-hoc-vibe-coding-thuc-chien-lam-chu-ai-and-lap-trinh-hien-djai-thumbnail-image.png",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/full-combo-khoa-hoc-ai-tri-tue-nhan-tao-tu-co-ban-djen-nang-cao",
+      "title": "",
+      "image": "https://res.cloudinary.com/ds063chqq/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1783586687/full-combo-khoa-hoc-ai-tri-tue-nhan-tao-tu-co-ban-djen-nang-cao-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/combo-11-khoa-hoc-lap-trinh-hoidanit-2023-2024",
+      "title": "",
+      "image": "https://res.cloudinary.com/dyqyc4uww/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1784514512/combo-11-khoa-hoc-lap-trinh-hoidanit-2023-2024-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-ban-hang-bang-facebook-ca-nhan-xay-kenh-hoan-thien-cung-co-ba-edit",
+      "title": "",
+      "image": "https://res.cloudinary.com/dbr76jwng/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1792313925/courses/khoa-hoc-ban-hang-bang-facebook-ca-nhan-xay-kenh-hoan-thien-cung-co-ba-edit-thumbnail.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-smc-x-ict-tu-duy-dong-tien-and-giao-dich-chuan-smart-money-cung-banktraps",
+      "title": "",
+      "image": "https://res.cloudinary.com/dojjzu8sd/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1792312479/courses/khoa-hoc-smc-x-ict-tu-duy-dong-tien-and-giao-dich-chuan-smart-money-cung-banktraps-thumbnail.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/combo-2-khoa-hoc-forex-k1-and-k2-cung-nguyen-vu-nam-trader",
+      "title": "",
+      "image": "https://res.cloudinary.com/dee6tfo3j/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1792311798/courses/combo-2-khoa-hoc-forex-k1-and-k2-cung-nguyen-vu-nam-trader-thumbnail.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-smc-pho-trading-nang-cao-moi-nhat-zoom-thuc-chien-smart-money",
+      "title": "",
+      "image": "https://res.cloudinary.com/dubcgtfky/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1792311259/courses/khoa-hoc-smc-pho-trading-nang-cao-moi-nhat-zoom-thuc-chien-smart-money-thumbnail.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-lam-chu-phuong-phap-supply-demand-chuan-xac-nhat-cung-sdz-quyet-anh-moi-nhat",
+      "title": "",
+      "image": "https://res.cloudinary.com/ds063chqq/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1792309860/courses/khoa-hoc-lam-chu-phuong-phap-supply-demand-chuan-xac-nhat-cung-sdz-quyet-anh-moi-nhat-thumbnail.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-video-ai-affiliate-thuc-chien-cung-minh-duong",
+      "title": "",
+      "image": "https://res.cloudinary.com/dkf0xygyr/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1792297608/courses/khoa-hoc-video-ai-affiliate-thuc-chien-cung-minh-duong-thumbnail.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-dockerize-and-deploy-djua-ung-dung-len-vps-thuc-chien-tu-so-0-cung-hoi-dan-it",
+      "title": "",
+      "image": "https://res.cloudinary.com/dojjzu8sd/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1792295565/courses/khoa-hoc-dockerize-and-deploy-djua-ung-dung-len-vps-thuc-chien-tu-so-0-cung-hoi-dan-it-thumbnail.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/tron-bo-khoa-hoc-marketing-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi",
+      "title": "",
+      "image": "https://res.cloudinary.com/ejq0ppqi/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1783430183/tron-bo-khoa-hoc-marketing-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-claude-ai-zero-khong-can-biet-code-van-dung-ai-nhu-pro-cung-hoi-dan-it",
+      "title": "",
+      "image": "https://res.cloudinary.com/ddofotdbq/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1787326702/khoa-hoc-claude-ai-zero-khong-can-biet-code-van-dung-ai-nhu-pro-cung-hoi-dan-it-thumbnail.png",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-claude-ai-skills-tu-djong-hoa-va-nang-cao-hieu-qua-trong-cong-viec",
+      "title": "",
+      "image": "https://res.cloudinary.com/lbzw9jmn/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1784389578/khoa-hoc-claude-ai-skills-tu-djong-hoa-va-nang-cao-hieu-qua-trong-cong-viec-thumbnail-image.png",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-vibe-coding-2026-phan-djuc-nho-tu-tao-phan-mem-web-and-tools-bang-ai",
+      "title": "",
+      "image": "https://res.cloudinary.com/dkf0xygyr/image/upload/c_fill,g_auto,w_600,h_338,f_auto,q_auto/v1780971895/khoa-hoc-vibe-coding-2026-phan-djuc-nho-tu-tao-phan-mem-web-and-tools-bang-ai-thumbnail-image.png",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-claude-code-thuc-chien-tu-beginner-djen-pro-cung-hoi-dan-it",
+      "title": "",
+      "image": "https://res.cloudinary.com/dgowkntro/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1780297701/khoa-hoc-claude-code-thuc-chien-tu-beginner-djen-pro-cung-hoi-dan-it-thumbnail.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-all-in-one-2023-aio-2023-khoa-hoc-du-lieu-va-tri-tue-nhan-tao-cung-aivietnam",
+      "title": "",
+      "image": "https://res.cloudinary.com/dubcgtfky/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1783586679/khoa-all-in-one-2023-aio-2023-khoa-hoc-du-lieu-va-tri-tue-nhan-tao-cung-aivietnam-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/khoa-hoc-master-data-science-and-machine-learning-nang-cao-2025-cung-viet-nguyen-ai",
+      "title": "",
+      "image": "https://res.cloudinary.com/decequgww/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1783586727/khoa-hoc-master-data-science-and-machine-learning-nang-cao-2025-cung-viet-nguyen-ai-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/combo-khoa-hoc-lap-trinh-protonx",
+      "title": "",
+      "image": "https://res.cloudinary.com/vmxg9iif/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1784044281/combo-khoa-hoc-lap-trinh-protonx-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/tron-bo-khoa-hoc-ngoai-ngu-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi",
+      "title": "",
+      "image": "https://res.cloudinary.com/ejq0ppqi/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1784514511/tron-bo-khoa-hoc-ngoai-ngu-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/tron-bo-khoa-hoc-tieng-trung-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi",
+      "title": "",
+      "image": "https://res.cloudinary.com/dp6afut6m/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1779934487/tron-bo-khoa-hoc-tieng-trung-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi-detail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/tron-bo-khoa-hoc-tieng-nhat-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi",
+      "title": "",
+      "image": "https://res.cloudinary.com/dpcdx5uhn/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1778837065/tron-bo-khoa-hoc-tieng-nhat-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi-detail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/tron-bo-khoa-hoc-tieng-han-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi",
+      "title": "",
+      "image": "https://res.cloudinary.com/dgowkntro/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1782988700/tron-bo-khoa-hoc-tieng-han-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    },
+    {
+      "href": "/khoa-hoc/tron-bo-khoa-hoc-tieng-anh-giao-tiep-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi",
+      "title": "",
+      "image": "https://res.cloudinary.com/dclz8lfyb/image/upload/c_fill,g_auto,w_600,h_338/f_auto,q_auto/v1784044295/tron-bo-khoa-hoc-tieng-anh-giao-tiep-hoc-tron-djoi-cap-nhat-lien-tuc-mien-phi-thumbnail-image.jpg",
+      "prices": [],
+      "rating": "5.0",
+      "raw_text": []
+    }
+  ],
+  "features": []
+}

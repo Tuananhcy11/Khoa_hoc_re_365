@@ -1,0 +1,1 @@
+.wishlist_button{width:38px;height:38px;display:grid;place-items:center;border:1px solid hsla(0,0%,100%,.7);border-radius:50%;background:hsla(0,0%,100%,.92);color:#65656a;box-shadow:0 3px 12px rgba(30,27,20,.12);cursor:pointer}.wishlist_button.saved,.wishlist_button:hover{color:#c7253d;background:#fff}.wishlist_button svg{font-size:21px}

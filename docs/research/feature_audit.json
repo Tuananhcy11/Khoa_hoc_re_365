@@ -1,0 +1,201 @@
+{
+  "total_swipers": 22,
+  "swipers": [
+    {
+      "tag": "div",
+      "classes": [
+        "khgh-hero__slider"
+      ],
+      "parent_classes": [
+        "khgh-hero__visual"
+      ],
+      "text_sample": ""
+    },
+    {
+      "tag": "div",
+      "classes": [
+        "khgh-hero__slide",
+        "is-active"
+      ],
+      "parent_classes": [
+        "khgh-hero__slider"
+      ],
+      "text_sample": ""
+    },
+    {
+      "tag": "div",
+      "classes": [
+        "khgh-hero__slide"
+      ],
+      "parent_classes": [
+        "khgh-hero__slider"
+      ],
+      "text_sample": ""
+    },
+    {
+      "tag": "div",
+      "classes": [
+        "khgh-hero__slide"
+      ],
+      "parent_classes": [
+        "khgh-hero__slider"
+      ],
+      "text_sample": ""
+    },
+    {
+      "tag": "div",
+      "classes": [
+        "khgh-mobile-swiper__dots"
+      ],
+      "parent_classes": [
+        "khgh-flash"
+      ],
+      "text_sample": ""
+    },
+    {
+      "tag": "div",
+      "classes": [
+        "khgh-mobile-swiper__dots"
+      ],
+      "parent_classes": [
+        "khgh-flash"
+      ],
+      "text_sample": ""
+    },
+    {
+      "tag": "div",
+      "classes": [
+        "khgh-course-grid",
+        "khgh-course-grid--mobile-swiper"
+      ],
+      "parent_classes": [
+        "khgh-course-section"
+      ],
+      "text_sample": "Combo Khóa HọcTrọn Bộ Khóa Học Trên Website Với Quyền Truy Cập Vĩnh Viễn & Cập N"
+    },
+    {
+      "tag": "div",
+      "classes": [
+        "khgh-mobile-swiper__dots"
+      ],
+      "parent_classes": [
+        "khgh-course-section"
+      ],
+      "text_sample": ""
+    },
+    {
+      "tag": "div",
+      "classes": [
+        "khgh-mobile-swiper__dots"
+      ],
+      "parent_classes": [
+        "khgh-tools"
+      ],
+      "text_sample": ""
+    },
+    {
+      "tag": "div",
+      "classes": [
+        "khgh-membership__plans",
+        "khgh-membership__plans--swiper",
+        "is-mouse-draggable"
+      ],
+      "parent_classes": [
+        "khgh-membership__plans-shell"
+      ],
+      "text_sample": "TRỌN BỘ WEBSITETIẾT KIỆM NHẤTTrọn bộ hơn 2.000 khóa họcTruy cập toàn bộ kho khóa"
+    }
+  ],
+  "bottom_docks": [
+    {
+      "tag": "aside",
+      "classes": [
+        "support_dock"
+      ],
+      "text": "Hỗ trợ | Chúng tôi luôn sẵn sàng",
+      "links": []
+    },
+    {
+      "tag": "nav",
+      "classes": [
+        "mobile-bottom-nav"
+      ],
+      "text": "Trang chủ | Khóa học | Hội viên | Tài khoản",
+      "links": [
+        {
+          "text": "Trang chủ",
+          "href": "/"
+        },
+        {
+          "text": "Khóa học",
+          "href": "/mua"
+        },
+        {
+          "text": "Hội viên",
+          "href": "/hoi-vien"
+        },
+        {
+          "text": "Tài khoản",
+          "href": "/tai-khoan"
+        }
+      ]
+    }
+  ],
+  "tabs_sample": [
+    {
+      "classes": [
+        "navigation_wrapper"
+      ],
+      "items": [
+        "Bán chạy",
+        "Mới cập nhật",
+        "Combo tiết kiệm",
+        "Công cụMới",
+        "Hội viênMới",
+        "Trọn bộ khóa học",
+        "Hướng dẫn mua",
+        "Zalo hỗ trợ:0583 953 426"
+      ]
+    },
+    {
+      "classes": [
+        "navigation_content"
+      ],
+      "items": [
+        "Bán chạy",
+        "Mới cập nhật",
+        "Combo tiết kiệm",
+        "Công cụMới",
+        "Hội viênMới",
+        "Trọn bộ khóa học",
+        "Hướng dẫn mua",
+        "Zalo hỗ trợ:0583 953 426"
+      ]
+    },
+    {
+      "classes": [
+        "mobile-bottom-nav"
+      ],
+      "items": [
+        "Trang chủ",
+        "Khóa học",
+        "Hội viên",
+        "Tài khoản"
+      ]
+    }
+  ],
+  "search_info": [
+    {
+      "classes": [
+        "header_search"
+      ],
+      "text": "Tìm"
+    },
+    {
+      "classes": [
+        "header_search_icon"
+      ],
+      "text": "Tìm"
+    }
+  ]
+}
