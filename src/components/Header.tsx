@@ -86,16 +86,21 @@ export default function Header({
         {/* Mobile: logo + nút ở hàng 1, ô tìm kiếm xuống hàng 2 (flex-wrap) */}
         <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-x-2 gap-y-2.5 sm:gap-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="relative h-9 w-32 sm:h-11 sm:w-44">
+          <Link href="/" className="flex items-center gap-2.5 shrink-0">
+            <div className="relative h-10 w-10 sm:h-11 sm:w-11 rounded-xl overflow-hidden ring-1 ring-white/10">
               <Image
-                src="/images/0_logo.png"
-                alt="Khóa Học Giá Hời"
+                src="/images/logo-hocre365.png"
+                alt="Học Rẻ 365"
                 fill
-                className="object-contain"
+                className="object-cover"
                 priority
               />
             </div>
+            <span className="font-black text-base sm:text-lg leading-none tracking-tight">
+              <span className="text-white">Học </span>
+              <span className="text-[#f3dc85]">Rẻ</span>
+              <span className="text-white"> 365</span>
+            </span>
           </Link>
 
           {/* Category Dropdown Button */}

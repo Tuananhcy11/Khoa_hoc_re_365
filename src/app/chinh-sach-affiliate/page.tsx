@@ -42,7 +42,7 @@ export default function AffiliatePage() {
               Chương Trình Đối Tác & Affiliate 2025
             </h1>
             <p className="text-sm text-gray-600 mt-2 max-w-xl mx-auto">
-              Giới thiệu bạn bè, học viên cùng tham gia Khóa Học Giá Hời và nhận hoa hồng lên đến 30% - 50% cho mỗi đơn hàng thành công.
+              Giới thiệu bạn bè, học viên cùng tham gia Học Rẻ 365 và nhận hoa hồng lên đến 30% - 50% cho mỗi đơn hàng thành công.
             </p>
           </div>
 

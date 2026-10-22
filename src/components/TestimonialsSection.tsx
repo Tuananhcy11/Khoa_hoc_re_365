@@ -18,7 +18,7 @@ export default function TestimonialsSection({ testimonials }: TestimonialsSectio
             Học Viên Nói Gì Về Chúng Tôi?
           </h2>
           <p className="text-sm text-gray-400 mt-2">
-            Hơn 50.000+ thành viên đã tin tưởng và nâng cao kỹ năng nghề nghiệp cùng Khóa Học Giá Hời.
+            Hơn 50.000+ thành viên đã tin tưởng và nâng cao kỹ năng nghề nghiệp cùng Học Rẻ 365.
           </p>
         </div>
 

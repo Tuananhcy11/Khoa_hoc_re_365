@@ -11,13 +11,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Col 1: Brand Info */}
           <div>
-            <Link href="/" className="inline-block relative h-10 w-40 mb-4">
-              <Image
-                src="/images/0_logo.png"
-                alt={siteConfig.name}
-                fill
-                className="object-contain"
-              />
+            <Link href="/" className="inline-flex items-center gap-2.5 mb-4">
+              <span className="relative h-11 w-11 rounded-xl overflow-hidden ring-1 ring-white/10 shrink-0">
+                <Image
+                  src="/images/logo-hocre365.png"
+                  alt={siteConfig.name}
+                  fill
+                  className="object-cover"
+                />
+              </span>
+              <span className="font-black text-lg leading-none tracking-tight">
+                <span className="text-white">Học </span>
+                <span className="text-[#f3dc85]">Rẻ</span>
+                <span className="text-white"> 365</span>
+              </span>
             </Link>
             <p className="text-xs text-gray-400 leading-relaxed mb-4">
               {siteConfig.name} — Nền tảng chia sẻ khóa học trực tuyến uy tín hàng đầu Việt Nam. Cung cấp kho tài nguyên bài giảng video chất lượng cao từ các chuyên gia hàng đầu.

@@ -267,7 +267,7 @@ export default function TaiKhoanPage() {
                 <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200/80 shadow-sm space-y-6">
                   <div>
                     <h2 className="text-xl font-black text-[#171a1c]">Chính Sách & Bảo Hành Học Viên</h2>
-                    <p className="text-xs text-gray-500 mt-1">Thông tin quyền lợi học tập của bạn tại Khóa Học Giá Hời.</p>
+                    <p className="text-xs text-gray-500 mt-1">Thông tin quyền lợi học tập của bạn tại Học Rẻ 365.</p>
                   </div>
 
                   <div className="space-y-4 text-xs text-gray-700 leading-relaxed">

@@ -26,7 +26,7 @@ export default function FaqSection({ faqs }: FaqSectionProps) {
             Câu Hỏi Thường Gặp
           </h2>
           <p className="text-sm text-gray-500 mt-1">
-            Mọi điều bạn cần biết trước khi mua khóa học tại Khóa Học Giá Hời.
+            Mọi điều bạn cần biết trước khi mua khóa học tại Học Rẻ 365.
           </p>
         </div>
 

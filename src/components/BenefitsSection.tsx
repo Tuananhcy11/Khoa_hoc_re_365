@@ -52,7 +52,7 @@ export default function BenefitsSection() {
             Cam kết chất lượng
           </span>
           <h2 className="mt-3 text-2xl md:text-3xl font-extrabold text-[#171a1c] text-balance">
-            Tại Sao Hơn 50.000+ Học Viên Chọn Khóa Học Giá Hời?
+            Tại Sao Hơn 50.000+ Học Viên Chọn Học Rẻ 365?
           </h2>
           <p className="mt-2 text-sm text-gray-600">
             Giải pháp học tập tiết kiệm đến 95% chi phí mà vẫn đảm bảo chất lượng tri thức nguyên bản.

@@ -12,10 +12,10 @@ const beVietnamPro = Be_Vietnam_Pro({
 });
 
 export const metadata: Metadata = {
-  title: "Khóa Học Giá Hời - Share khóa học giá rẻ, uy tín, chất lượng",
-  description: "Khám phá hàng ngàn khóa học online chất lượng thuộc nhiều lĩnh vực với mức giá tốt, nhận khóa học nhanh chóng và hỗ trợ tận tâm tại Khóa Học Giá Hời.",
+  title: "Học Rẻ 365 - Share khóa học giá rẻ, uy tín, chất lượng",
+  description: "Khám phá hàng ngàn khóa học online chất lượng thuộc nhiều lĩnh vực với mức giá tốt, nhận khóa học nhanh chóng và hỗ trợ tận tâm tại Học Rẻ 365.",
   icons: {
-    icon: "/images/0_logo.png",
+    icon: "/images/logo-hocre365.png",
   },
 };
 
