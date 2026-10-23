@@ -83,7 +83,7 @@ export default function HuongDanMuaHangPage() {
                     <strong className="text-[#171a1c]">{siteConfig.bankInfo.bankName}</strong>
                   </div>
                   <div className="flex justify-between py-1 border-b border-gray-200">
-                    <span className="text-gray-500">Số tài khoản / Hotline:</span>
+                    <span className="text-gray-500">Số tài khoản:</span>
                     <strong className="text-[#c9a43c] font-mono text-sm">{siteConfig.bankInfo.accountNumber}</strong>
                   </div>
                   <div className="flex justify-between py-1 border-b border-gray-200">
