@@ -217,19 +217,25 @@ function MuaContent() {
                     ← Trang trước
                   </button>
 
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                    <button
-                      key={page}
-                      onClick={() => goToPage(page)}
-                      className={`w-9 h-9 rounded-xl text-xs font-bold transition-all ${
-                        currentPage === page
-                          ? "bg-[#171a1c] text-[#f3dc85] shadow-lg shadow-black/20 scale-105"
-                          : "bg-white text-gray-700 border border-gray-200 hover:bg-gray-100"
-                      }`}
-                    >
-                      {page}
-                    </button>
-                  ))}
+                  {Array.from({ length: totalPages }, (_, i) => i + 1)
+                    .filter((page) => page === 1 || page === totalPages || Math.abs(page - currentPage) <= 1)
+                    .map((page, idx, arr) => (
+                      <span key={page} className="flex items-center">
+                        {idx > 0 && arr[idx - 1] !== page - 1 && (
+                          <span className="px-1.5 text-gray-400 select-none">…</span>
+                        )}
+                        <button
+                          onClick={() => goToPage(page)}
+                          className={`w-9 h-9 rounded-xl text-xs font-bold transition-all ${
+                            currentPage === page
+                              ? "bg-[#171a1c] text-[#f3dc85] shadow-lg shadow-black/20 scale-105"
+                              : "bg-white text-gray-700 border border-gray-200 hover:bg-gray-100"
+                          }`}
+                        >
+                          {page}
+                        </button>
+                      </span>
+                    ))}
 
                   <button
                     onClick={() => goToPage(Math.min(totalPages, currentPage + 1))}
