@@ -3,13 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Grid, Crown, ShoppingBag, User } from "lucide-react";
+import { useCart } from "@/components/CartProvider";
 
-interface MobileBottomNavProps {
-  cartCount?: number;
-}
-
-export default function MobileBottomNav({ cartCount = 0 }: MobileBottomNavProps) {
+export default function MobileBottomNav() {
   const pathname = usePathname();
+  const cartCount = useCart().count;
 
   const navItems = [
     {

@@ -3,6 +3,7 @@ import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import SupportDock from "@/components/SupportDock";
+import { Providers } from "@/components/Providers";
 
 const beVietnamPro = Be_Vietnam_Pro({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -71,9 +72,11 @@ export default function RootLayout({
       className={`${beVietnamPro.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col font-sans bg-[#faf8f2] text-[#171717] pb-14 lg:pb-0">
-        {children}
-        <SupportDock />
-        <MobileBottomNav />
+        <Providers>
+          {children}
+          <SupportDock />
+          <MobileBottomNav />
+        </Providers>
       </body>
     </html>
   );

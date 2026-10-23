@@ -19,33 +19,38 @@ import {
 import { FacebookIcon } from "@/components/icons/FacebookIcon";
 import { siteConfig } from "@/lib/siteConfig";
 import { useCourses } from "@/hooks/useCourses";
+import { useCart } from "@/components/CartProvider";
+import { useSession, signOut } from "next-auth/react";
+import { LogOut } from "lucide-react";
 import type { Category, Course } from "@/types";
 
 interface HeaderProps {
   categories: Category[];
   searchQuery: string;
   onSearchChange: (q: string) => void;
-  cartCount: number;
-  wishlistCount: number;
-  onOpenCart: () => void;
-  onOpenWishlist: () => void;
+  // Các prop dưới giữ cho tương thích — Header tự dùng CartProvider
+  cartCount?: number;
+  wishlistCount?: number;
+  onOpenCart?: () => void;
+  onOpenWishlist?: () => void;
 }
 
 export default function Header({
   categories,
   searchQuery,
   onSearchChange,
-  cartCount,
-  wishlistCount,
-  onOpenCart,
+  wishlistCount = 0,
   onOpenWishlist,
 }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [categoryMenuOpen, setCategoryMenuOpen] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
   const searchContainerRef = useRef<HTMLDivElement>(null);
 
   const { courses: allCourses } = useCourses();
+  const cart = useCart();
+  const { data: session } = useSession();
 
   const searchSuggestions = searchQuery.trim().length > 0
     ? allCourses.filter((c) =>
@@ -263,26 +268,67 @@ export default function Header({
 
             {/* Cart Button */}
             <button
-              onClick={onOpenCart}
+              onClick={cart.openCart}
               className="relative p-2.5 rounded-xl bg-[#252a2d] hover:bg-[#30363b] border border-white/10 text-gray-200 hover:text-[#f3dc85] transition-colors"
               title="Giỏ hàng"
             >
               <ShoppingCart className="w-5 h-5" />
-              {cartCount > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-[#c9a43c] text-slate-950 text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
-                  {cartCount}
+              {cart.count > 0 && (
+                <span className="absolute -top-1.5 -right-1.5 bg-[#c9a43c] text-slate-950 text-[10px] font-bold min-w-5 h-5 px-1 rounded-full flex items-center justify-center">
+                  {cart.count}
                 </span>
               )}
             </button>
 
-            {/* User Account Button */}
-            <Link
-              href="/tai-khoan"
-              className="relative hidden sm:block p-2.5 rounded-xl bg-[#252a2d] hover:bg-[#30363b] border border-white/10 text-gray-200 hover:text-[#f3dc85] transition-colors"
-              title="Tài khoản & Đơn hàng"
-            >
-              <User className="w-5 h-5" />
-            </Link>
+            {/* User / Đăng nhập */}
+            {session?.user ? (
+              <div className="relative hidden sm:block">
+                <button
+                  onClick={() => setUserMenuOpen((v) => !v)}
+                  className="flex items-center gap-2 p-1.5 pr-3 rounded-xl bg-[#252a2d] hover:bg-[#30363b] border border-white/10 text-gray-200 transition-colors"
+                  title="Tài khoản"
+                >
+                  <span className="w-7 h-7 rounded-lg bg-[#d5ab3d] text-slate-950 font-black text-xs flex items-center justify-center overflow-hidden">
+                    {session.user.image ? (
+                      <Image src={session.user.image} alt="" width={28} height={28} className="object-cover" />
+                    ) : (
+                      (session.user.name || session.user.email || "U").charAt(0).toUpperCase()
+                    )}
+                  </span>
+                  <span className="text-xs font-bold max-w-[90px] truncate">
+                    {session.user.name || session.user.email?.split("@")[0]}
+                  </span>
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform ${userMenuOpen ? "rotate-180" : ""}`} />
+                </button>
+                {userMenuOpen && (
+                  <div
+                    className="absolute top-full right-0 mt-2 w-52 bg-[#252a2d] border border-white/10 rounded-2xl shadow-2xl py-2 z-50"
+                    onMouseLeave={() => setUserMenuOpen(false)}
+                  >
+                    <div className="px-4 py-2 border-b border-white/5">
+                      <div className="text-xs font-bold text-white truncate">{session.user.name || "Thành viên"}</div>
+                      <div className="text-[11px] text-gray-400 truncate">{session.user.email}</div>
+                    </div>
+                    <Link href="/tai-khoan" onClick={() => setUserMenuOpen(false)} className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-200 hover:bg-white/5 hover:text-[#f3dc85]">
+                      <User className="w-4 h-4" /> Tài khoản & khóa đã lưu
+                    </Link>
+                    <button
+                      onClick={() => { setUserMenuOpen(false); signOut({ callbackUrl: "/" }); }}
+                      className="w-full flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-200 hover:bg-white/5 hover:text-red-300"
+                    >
+                      <LogOut className="w-4 h-4" /> Đăng xuất
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                href="/dang-nhap"
+                className="hidden sm:flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-[#d7ae32] to-[#b88d22] text-slate-950 font-bold text-xs hover:brightness-110 transition"
+              >
+                <User className="w-4 h-4" /> Đăng nhập
+              </Link>
+            )}
 
             {/* Mobile Menu Button */}
             <button
@@ -351,13 +397,31 @@ export default function Header({
             ))}
           </div>
           <div className="pt-2 border-t border-white/5 flex flex-col gap-2">
-            <Link
-              href="/tai-khoan"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-center text-xs py-2 bg-[#252a2d] text-gray-200 font-bold rounded-xl"
-            >
-              Tài khoản & Khóa học đã lưu
-            </Link>
+            {session?.user ? (
+              <>
+                <Link
+                  href="/tai-khoan"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-center text-xs py-2.5 bg-[#252a2d] text-gray-200 font-bold rounded-xl"
+                >
+                  Tài khoản & Khóa học đã lưu
+                </Link>
+                <button
+                  onClick={() => { setMobileMenuOpen(false); signOut({ callbackUrl: "/" }); }}
+                  className="text-center text-xs py-2.5 bg-[#252a2d] text-red-300 font-bold rounded-xl flex items-center justify-center gap-2"
+                >
+                  <LogOut className="w-4 h-4" /> Đăng xuất
+                </button>
+              </>
+            ) : (
+              <Link
+                href="/dang-nhap"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-center text-xs py-2.5 bg-gradient-to-r from-[#d7ae32] to-[#b88d22] text-slate-950 font-black rounded-xl flex items-center justify-center gap-2"
+              >
+                <User className="w-4 h-4" /> Đăng nhập / Đăng ký
+              </Link>
+            )}
             <a
               href={siteConfig.fanpageUrl}
               target="_blank"

@@ -6,13 +6,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import { Trash2, ShoppingBag, ArrowRight, ShieldCheck, QrCode } from "lucide-react";
+import { Trash2, ShoppingBag, ArrowRight, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
-import type { Course } from "@/types";
+import { useCart } from "@/components/CartProvider";
 
 export default function GioHangPage() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [cartItems, setCartItems] = useState<Course[]>([]);
+  const { items: cartItems, remove } = useCart();
 
   const parsePrice = (priceStr: string) => {
     const clean = priceStr.replace(/[^0-9]/g, "");
@@ -28,10 +28,6 @@ export default function GioHangPage() {
         categories={siteData.categories}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
-        cartCount={cartItems.length}
-        wishlistCount={0}
-        onOpenCart={() => {}}
-        onOpenWishlist={() => {}}
       />
 
       <main className="flex-1 py-12">
@@ -81,7 +77,7 @@ export default function GioHangPage() {
                       <div className="text-sm font-black text-[#c9a43c] mt-1">{item.salePrice}</div>
                     </div>
                     <button
-                      onClick={() => setCartItems(cartItems.filter((i) => i.id !== item.id))}
+                      onClick={() => remove(item.id)}
                       className="p-2 text-gray-400 hover:text-red-500 rounded-lg hover:bg-gray-100"
                     >
                       <Trash2 className="w-4 h-4" />

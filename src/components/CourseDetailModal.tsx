@@ -3,19 +3,20 @@
 import Image from "next/image";
 import { X, Star, Users, Check, ShoppingCart, MessageCircle, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
+import { useCart } from "@/components/CartProvider";
 import type { Course } from "@/types";
 
 interface CourseDetailModalProps {
   course: Course | null;
   onClose: () => void;
-  onAddToCart: (course: Course) => void;
+  onAddToCart?: (course: Course) => void;
 }
 
 export default function CourseDetailModal({
   course,
   onClose,
-  onAddToCart,
 }: CourseDetailModalProps) {
+  const cart = useCart();
   if (!course) return null;
 
   return (
@@ -125,7 +126,7 @@ export default function CourseDetailModal({
         <div className="p-5 border-t border-white/10 bg-[#171a1c] flex items-center justify-end gap-3">
           <button
             onClick={() => {
-              onAddToCart(course);
+              cart.add(course);
               onClose();
             }}
             className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs flex items-center gap-2 transition-colors"

@@ -1,13 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import { Star, ShoppingCart, Heart, Check, Flame, Sparkles } from "lucide-react";
+import { useCart } from "@/components/CartProvider";
 import type { Course } from "@/types";
 
 interface CourseCardProps {
   course: Course;
-  onAddToCart: (course: Course) => void;
-  onToggleWishlist: (course: Course) => void;
   onSelectCourse: (course: Course) => void;
-  isWished: boolean;
+  onToggleWishlist?: (course: Course) => void;
+  isWished?: boolean;
+  // Các prop giỏ hàng cũ giữ lại cho tương thích, nhưng CourseCard tự dùng CartProvider
+  onAddToCart?: (course: Course) => void;
   inCart?: boolean;
   isNew?: boolean;
   variant?: "light" | "dark";
@@ -31,15 +35,15 @@ function formatSaving(amount: number): string {
 
 export default function CourseCard({
   course,
-  onAddToCart,
   onToggleWishlist,
   onSelectCourse,
-  isWished,
-  inCart = false,
+  isWished = false,
   isNew = false,
   variant = "light",
   className = "",
 }: CourseCardProps) {
+  const cart = useCart();
+  const inCart = cart.has(course.id);
   const dark = variant === "dark";
   const sale = parsePrice(course.salePrice);
   const regular = parsePrice(course.regularPrice);
@@ -101,7 +105,7 @@ export default function CourseCard({
           </span>
           <button
             type="button"
-            onClick={() => onToggleWishlist(course)}
+            onClick={() => onToggleWishlist?.(course)}
             aria-label={isWished ? "Bỏ yêu thích" : "Yêu thích"}
             className={`p-1 rounded-md shrink-0 transition-colors ${dark ? "hover:bg-white/10" : "hover:bg-gray-100"}`}
           >
@@ -148,7 +152,7 @@ export default function CourseCard({
         <div className="mt-auto pt-3 @[15rem]:pt-4 grid grid-cols-1 @[15rem]:grid-cols-[1fr_auto] gap-2">
           <button
             type="button"
-            onClick={() => onAddToCart(course)}
+            onClick={() => cart.add(course)}
             className={`py-2.5 px-2 rounded-xl font-black text-xs whitespace-nowrap flex items-center justify-center gap-1.5 transition-all ${
               inCart
                 ? "bg-emerald-500 text-white"
