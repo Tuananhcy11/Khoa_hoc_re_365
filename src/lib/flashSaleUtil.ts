@@ -7,72 +7,64 @@ export interface FlashSaleTimer {
   minutes: number;
   seconds: number;
   targetDate: Date;
-  slotTimeDisplay: string; // "11:00 - 18:00"
-  saleDateDisplay: string; // "Ngày 19 hàng tháng"
-  durationHours: number;   // 7 tiếng
+  slotTimeDisplay: string;
+  nextSlotTime: string;
 }
 
 /**
- * Quy tắc Flash Sale cố định:
- * - Diễn ra vào ngày 19 hàng tháng
- * - Bắt đầu từ 11:00 trưa (11:00 AM)
- * - Kéo dài cố định 7 tiếng -> kết thúc lúc 18:00 cùng ngày (6:00 PM)
- * - Chỉ có 1 khung giờ vàng duy nhất trong tháng.
+ * Quy tắc Flash Sale vòng lặp:
+ * - Mở bán 1 tiếng
+ * - Sau đó nghỉ 1 tiếng
+ * - Lặp lại liên tục: 1 tiếng Sale -> 1 tiếng Nghỉ -> 1 tiếng Sale
+ * (Giờ chẵn: 0h, 2h, 4h, ..., 12h, 14h, 16h, 18h, 20h, 22h -> FLASH SALE ĐANG MỞ)
+ * (Giờ lẻ: 1h, 3h, 5h, ..., 11h, 13h, 15h, 17h, 19h, 21h, 23h -> NGHỈ / SẮP MỞ)
  */
 export function getFlashSaleState(now: Date = new Date()): FlashSaleTimer {
-  const currentYear = now.getFullYear();
-  const currentMonth = now.getMonth();
+  const currentHour = now.getHours();
+  // Giờ chẵn là mở bán, giờ lẻ là nghỉ chờ phiên tiếp theo
+  const isSaleHour = currentHour % 2 === 0;
 
-  // Khung giờ 11:00 - 18:00 ngày 19 tháng này
-  const startThisMonth = new Date(currentYear, currentMonth, 19, 11, 0, 0, 0);
-  const endThisMonth = new Date(currentYear, currentMonth, 19, 18, 0, 0, 0);
+  // Điểm mốc tiếp theo là tròn giờ tiếp theo (đầu giờ sau)
+  const nextHour = new Date(now);
+  nextHour.setHours(currentHour + 1, 0, 0, 0);
 
-  let isActive = false;
-  let targetDate: Date;
-  let label: "KẾT THÚC SAU" | "BẮT ĐẦU SAU";
-  let statusBadge: "ĐANG MỞ" | "SẮP MỞ";
-
-  if (now.getTime() >= startThisMonth.getTime() && now.getTime() < endThisMonth.getTime()) {
-    // Đang trong khung giờ vàng (11:00 - 18:00 ngày 19)
-    isActive = true;
-    targetDate = endThisMonth;
-    label = "KẾT THÚC SAU";
-    statusBadge = "ĐANG MỞ";
-  } else if (now.getTime() < startThisMonth.getTime()) {
-    // Chưa tới 11:00 ngày 19 của tháng hiện tại
-    isActive = false;
-    targetDate = startThisMonth;
-    label = "BẮT ĐẦU SAU";
-    statusBadge = "SẮP MỞ";
-  } else {
-    // Đã qua 18:00 ngày 19 tháng hiện tại -> Đếm tới 11:00 ngày 19 tháng sau
-    isActive = false;
-    targetDate = new Date(currentYear, currentMonth + 1, 19, 11, 0, 0, 0);
-    label = "BẮT ĐẦU SAU";
-    statusBadge = "SẮP MỞ";
-  }
-
-  const diffMs = Math.max(0, targetDate.getTime() - now.getTime());
+  const diffMs = Math.max(0, nextHour.getTime() - now.getTime());
   const totalSeconds = Math.floor(diffMs / 1000);
 
-  const days = Math.floor(totalSeconds / 86400);
-  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const hours = Math.floor(totalSeconds / 3600); // Luôn là 0 trong khung 1 tiếng
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = totalSeconds % 60;
 
-  return {
-    isActive,
-    label,
-    statusBadge,
-    days,
-    hours,
-    minutes,
-    seconds,
-    targetDate,
-    slotTimeDisplay: "11:00 - 18:00",
-    saleDateDisplay: "Ngày 19 hàng tháng",
-    durationHours: 7,
-  };
+  const currentSlotStr = `${String(currentHour).padStart(2, "0")}:00 - ${String((currentHour + 1) % 24).padStart(2, "0")}:00`;
+  const nextSlotStr = `${String((currentHour + 1) % 24).padStart(2, "0")}:00 - ${String((currentHour + 2) % 24).padStart(2, "0")}:00`;
+
+  if (isSaleHour) {
+    return {
+      isActive: true,
+      label: "KẾT THÚC SAU",
+      statusBadge: "ĐANG MỞ",
+      days: 0,
+      hours,
+      minutes,
+      seconds,
+      targetDate: nextHour,
+      slotTimeDisplay: currentSlotStr,
+      nextSlotTime: nextSlotStr,
+    };
+  } else {
+    return {
+      isActive: false,
+      label: "BẮT ĐẦU SAU",
+      statusBadge: "SẮP MỞ",
+      days: 0,
+      hours,
+      minutes,
+      seconds,
+      targetDate: nextHour,
+      slotTimeDisplay: currentSlotStr,
+      nextSlotTime: nextSlotStr,
+    };
+  }
 }
 
 export function padZero(n: number): string {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Flame, Clock, Calendar, Sparkles } from "lucide-react";
+import { Flame, Clock, Sparkles } from "lucide-react";
 import CourseCard from "@/components/CourseCard";
 import { getFlashSaleState, padZero, type FlashSaleTimer } from "@/lib/flashSaleUtil";
 import type { Course } from "@/types";
@@ -53,7 +53,7 @@ export default function FlashSaleSection({
               <div>
                 <div className="flex items-center gap-2">
                   <h2 className="text-xl md:text-2xl font-black uppercase tracking-wider text-white">
-                    Flash Sale Ngày 19 Hàng Tháng
+                    Flash Sale Theo Khung Giờ
                   </h2>
                   {mounted && timer.isActive && (
                     <span className="bg-[#d5ab3d] text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">
@@ -62,50 +62,23 @@ export default function FlashSaleSection({
                   )}
                 </div>
                 <p className="text-xs text-gray-400 mt-1">
-                  Khung giờ vàng cố định <strong>7 tiếng (11:00 — 18:00)</strong> duy nhất trong tháng
+                  Mở bán chớp nhoáng <strong>1 tiếng</strong> · Nghỉ <strong>1 tiếng</strong> · Vòng lặp liên tục mỗi ngày
                 </p>
               </div>
             </div>
 
-            {/* Countdown & Slot Badge */}
-            <div className="flex flex-wrap items-center gap-3">
-              {/* Slot Indicator */}
-              <div
-                className={`px-4 py-2 rounded-2xl border text-xs font-bold flex items-center gap-2 ${
-                  timer.isActive
-                    ? "bg-[#d5ab3d] border-[#d5ab3d] text-slate-950 font-black shadow-lg shadow-[#d5ab3d]/20"
-                    : "bg-[#252a2d] border-white/10 text-gray-300"
-                }`}
-              >
-                <Calendar className="w-4 h-4" />
-                <div>
-                  <div className="text-[10px] uppercase opacity-80">Khung giờ cố định</div>
-                  <div className="text-sm font-black">11:00 — 18:00</div>
-                </div>
-                <span className="ml-1 px-2 py-0.5 rounded-md text-[10px] uppercase font-black bg-black/20">
-                  {timer.statusBadge}
-                </span>
-              </div>
+            {/* Countdown Clock */}
+            <div className="flex items-center gap-2 bg-[#252a2d] px-4 py-2.5 rounded-2xl border border-white/10 text-xs font-mono font-bold text-white">
+              <span className="text-gray-400 font-sans text-[11px] uppercase flex items-center gap-1">
+                <Clock className="w-3.5 h-3.5 text-[#e11d2e]" />
+                <span>{timer.label}:</span>
+              </span>
 
-              {/* Countdown Clock */}
-              <div className="flex items-center gap-2 bg-[#252a2d] px-4 py-2.5 rounded-2xl border border-white/10 text-xs font-mono font-bold text-white">
-                <span className="text-gray-400 font-sans text-[11px] uppercase flex items-center gap-1">
-                  <Clock className="w-3.5 h-3.5 text-[#e11d2e]" />
-                  <span>{timer.label}:</span>
-                </span>
-
-                {timer.days > 0 && (
-                  <span className="flex items-center gap-1">
-                    <span className="bg-[#e11d2e] px-2 py-1 rounded text-white font-black">{timer.days}d</span>
-                    <span className="text-gray-400">:</span>
-                  </span>
-                )}
-                <span className="bg-[#e11d2e] px-2 py-1 rounded text-white font-black">{padZero(timer.hours)}</span>
-                <span className="text-gray-400">:</span>
-                <span className="bg-[#e11d2e] px-2 py-1 rounded text-white font-black">{padZero(timer.minutes)}</span>
-                <span className="text-gray-400">:</span>
-                <span className="bg-[#e11d2e] px-2 py-1 rounded text-white font-black">{padZero(timer.seconds)}</span>
-              </div>
+              <span className="bg-[#e11d2e] px-2 py-1 rounded text-white font-black">{padZero(timer.hours)}</span>
+              <span className="text-gray-400">:</span>
+              <span className="bg-[#e11d2e] px-2 py-1 rounded text-white font-black">{padZero(timer.minutes)}</span>
+              <span className="text-gray-400">:</span>
+              <span className="bg-[#e11d2e] px-2 py-1 rounded text-white font-black">{padZero(timer.seconds)}</span>
             </div>
           </div>
         </div>

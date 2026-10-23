@@ -58,7 +58,7 @@ export default function FlashSaleSlotsSection({
                 )}
               </div>
               <p className="text-[11px] text-white/90 mt-0.5">
-                Duy nhất 1 khung giờ cố định <strong>7 tiếng</strong> vào <strong>ngày 19 hàng tháng (11:00 – 18:00)</strong>
+                Mở bán chớp nhoáng <strong>1 tiếng</strong> · Nghỉ <strong>1 tiếng</strong> · Vòng lặp liên tục mỗi ngày
               </p>
             </div>
           </div>
@@ -71,23 +71,15 @@ export default function FlashSaleSlotsSection({
             </span>
 
             <div className="flex items-center gap-1 font-mono font-black">
-              {timer.days > 0 && (
-                <div className="flex items-center gap-1">
-                  <span className="bg-black/35 rounded-md px-2 py-1 text-xs sm:text-sm tabular-nums">
-                    {timer.days}d
-                  </span>
-                  <span className="text-white/70">:</span>
-                </div>
-              )}
-              <span className="bg-black/35 rounded-md px-2 py-1 text-xs sm:text-sm tabular-nums">
+              <span className="bg-black/35 rounded-md px-2 py-1 text-sm tabular-nums">
                 {padZero(timer.hours)}
               </span>
               <span className="text-white/70">:</span>
-              <span className="bg-black/35 rounded-md px-2 py-1 text-xs sm:text-sm tabular-nums">
+              <span className="bg-black/35 rounded-md px-2 py-1 text-sm tabular-nums">
                 {padZero(timer.minutes)}
               </span>
               <span className="text-white/70">:</span>
-              <span className="bg-black/35 rounded-md px-2 py-1 text-xs sm:text-sm tabular-nums">
+              <span className="bg-black/35 rounded-md px-2 py-1 text-sm tabular-nums">
                 {padZero(timer.seconds)}
               </span>
             </div>
@@ -111,7 +103,7 @@ export default function FlashSaleSlotsSection({
         </div>
 
         <p className="text-center text-[11px] text-gray-400 mt-6">
-          ⚡ Giá Flash Sale chỉ mở bán cố định trong 7 tiếng vàng (11:00 – 18:00) ngày 19 hàng tháng.
+          ⚡ Giá Flash Sale áp dụng tự động trong phiên đang diễn ra. Phiên mới sẽ mở lại sau 1 tiếng.
         </p>
 
         <div className="mt-5 text-center">
