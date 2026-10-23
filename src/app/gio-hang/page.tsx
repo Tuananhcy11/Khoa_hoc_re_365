@@ -12,10 +12,7 @@ import type { Course } from "@/types";
 
 export default function GioHangPage() {
   const [searchQuery, setSearchQuery] = useState("");
-  // Sample course in cart if empty for display
-  const [cartItems, setCartItems] = useState<Course[]>([
-    siteData.courses[0] as Course
-  ]);
+  const [cartItems, setCartItems] = useState<Course[]>([]);
 
   const parsePrice = (priceStr: string) => {
     const clean = priceStr.replace(/[^0-9]/g, "");

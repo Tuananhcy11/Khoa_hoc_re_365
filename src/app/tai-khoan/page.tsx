@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import siteData from "../../../public/data/siteData.json";
+import { useCourses } from "@/hooks/useCourses";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartModal from "@/components/CartModal";
@@ -21,12 +22,13 @@ export default function TaiKhoanPage() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
-  const courses = siteData.courses as Course[];
-  // Sample wishlisted items for demo
-  const [wishlistCourses, setWishlistCourses] = useState<Course[]>(courses.slice(0, 4));
+  const { courses } = useCourses();
+  // Demo wishlist: 4 khóa đầu, cho phép gỡ (không dùng effect để tránh render dây chuyền)
+  const [removedWishlist, setRemovedWishlist] = useState<Set<string>>(new Set());
+  const wishlistCourses = courses.slice(0, 4).filter((c) => !removedWishlist.has(c.id));
 
   const handleRemoveWishlist = (id: string) => {
-    setWishlistCourses((prev) => prev.filter((c) => c.id !== id));
+    setRemovedWishlist((prev) => new Set(prev).add(id));
   };
 
   const handleAddToCart = (course: Course) => {
@@ -44,10 +46,7 @@ export default function TaiKhoanPage() {
       orderCode: "KHGH-" + Math.floor(100000 + Math.random() * 900000),
       email: orderLookupEmail,
       status: "Đã thanh toán (Hoàn tất)",
-      items: [
-        courses[0],
-        courses[1],
-      ],
+      items: [courses[0], courses[1]].filter(Boolean) as Course[],
       driveLink: "https://drive.google.com/drive/folders/example",
       paidAt: "22/10/2026 - 14:30",
     });

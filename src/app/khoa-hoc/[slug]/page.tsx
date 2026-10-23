@@ -7,8 +7,9 @@ import Footer from "@/components/Footer";
 import CartModal from "@/components/CartModal";
 import Image from "next/image";
 import Link from "next/link";
-import { Star, Users, Check, ShoppingCart, MessageCircle, ShieldCheck, PlayCircle, FolderOpen, ArrowRight } from "lucide-react";
+import { Star, Users, Check, ShoppingCart, MessageCircle, ShieldCheck, PlayCircle, FolderOpen, ArrowRight, Loader2 } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
+import { useCourses } from "@/hooks/useCourses";
 import type { Course } from "@/types";
 
 export default function CourseDetailPage({
@@ -21,18 +22,57 @@ export default function CourseDetailPage({
   const [cartItems, setCartItems] = useState<Course[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const courses = siteData.courses as Course[];
-  // Match course by slug or fallback to first course
-  const course = courses.find((c) => c.slug === slug) || courses[0];
+  const { courses, loading } = useCourses();
+  const course = courses.find((c) => c.slug === slug);
 
   const handleAddToCart = () => {
+    if (!course) return;
     if (!cartItems.some((item) => item.id === course.id)) {
       setCartItems((prev) => [...prev, course]);
     }
     setIsCartOpen(true);
   };
 
-  const relatedCourses = courses.filter((c) => c.id !== course.id).slice(0, 4);
+  const relatedCourses = course ? courses.filter((c) => c.id !== course.id).slice(0, 4) : [];
+
+  const headerProps = {
+    categories: siteData.categories,
+    searchQuery,
+    onSearchChange: setSearchQuery,
+    cartCount: cartItems.length,
+    wishlistCount: 0,
+    onOpenCart: () => setIsCartOpen(true),
+    onOpenWishlist: () => {},
+  };
+
+  // Đang tải dữ liệu khóa học
+  if (loading) {
+    return (
+      <div className="min-h-screen flex flex-col bg-[#faf8f2]">
+        <Header {...headerProps} />
+        <main className="flex-1 flex items-center justify-center py-32 text-gray-400 text-sm">
+          <Loader2 className="w-5 h-5 animate-spin mr-2" /> Đang tải khóa học...
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  // Không tìm thấy khóa học
+  if (!course) {
+    return (
+      <div className="min-h-screen flex flex-col bg-[#faf8f2]">
+        <Header {...headerProps} />
+        <main className="flex-1 flex flex-col items-center justify-center py-32 gap-4 text-center px-4">
+          <p className="text-gray-700 font-semibold">Không tìm thấy khóa học này.</p>
+          <Link href="/mua" className="px-5 py-2.5 rounded-xl bg-[#171a1c] text-[#f3dc85] font-bold text-sm">
+            Xem tất cả khóa học
+          </Link>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-[#faf8f2]">

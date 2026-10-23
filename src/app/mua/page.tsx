@@ -3,13 +3,14 @@
 import { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import siteData from "../../../public/data/siteData.json";
+import { useCourses } from "@/hooks/useCourses";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartModal from "@/components/CartModal";
 import CourseDetailModal from "@/components/CourseDetailModal";
 import CourseCard from "@/components/CourseCard";
 import Link from "next/link";
-import { Search, BookOpen } from "lucide-react";
+import { Search, BookOpen, Loader2 } from "lucide-react";
 import type { Course } from "@/types";
 
 // useSearchParams cần nằm trong Suspense để Next build được trang tĩnh
@@ -34,7 +35,7 @@ function MuaContent() {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
   const ITEMS_PER_PAGE = 12;
-  const courses = siteData.courses as Course[];
+  const { courses, loading } = useCourses();
 
   const filteredCourses = useMemo(() => {
     return courses.filter((c) => {
@@ -179,7 +180,11 @@ function MuaContent() {
           </div>
 
           {/* Course Grid */}
-          {filteredCourses.length === 0 ? (
+          {loading ? (
+            <div className="flex items-center justify-center gap-2 py-24 text-gray-400 text-sm">
+              <Loader2 className="w-5 h-5 animate-spin" /> Đang tải khóa học...
+            </div>
+          ) : filteredCourses.length === 0 ? (
             <div className="text-center py-20 bg-white rounded-3xl border border-dashed border-gray-300">
               <BookOpen className="w-12 h-12 text-gray-400 mx-auto mb-3" />
               <h3 className="text-base font-bold text-gray-800">Không tìm thấy khóa học nào</h3>

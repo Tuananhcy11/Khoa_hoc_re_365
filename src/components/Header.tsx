@@ -17,8 +17,8 @@ import {
   ArrowRight
 } from "lucide-react";
 import { FacebookIcon } from "@/components/icons/FacebookIcon";
-import siteData from "../../public/data/siteData.json";
 import { siteConfig } from "@/lib/siteConfig";
+import { useCourses } from "@/hooks/useCourses";
 import type { Category, Course } from "@/types";
 
 interface HeaderProps {
@@ -45,7 +45,7 @@ export default function Header({
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const searchContainerRef = useRef<HTMLDivElement>(null);
 
-  const allCourses = siteData.courses as Course[];
+  const { courses: allCourses } = useCourses();
 
   const searchSuggestions = searchQuery.trim().length > 0
     ? allCourses.filter((c) =>

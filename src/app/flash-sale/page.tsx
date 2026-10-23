@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import siteData from "../../../public/data/siteData.json";
+import { useCourses } from "@/hooks/useCourses";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartModal from "@/components/CartModal";
@@ -18,7 +19,7 @@ export default function FlashSalePage() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
-  const courses = siteData.courses as Course[];
+  const { courses } = useCourses();
 
   const handleAddToCart = (course: Course) => {
     if (!cartItems.some((item) => item.id === course.id)) {
