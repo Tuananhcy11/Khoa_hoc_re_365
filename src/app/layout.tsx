@@ -11,11 +11,52 @@ const beVietnamPro = Be_Vietnam_Pro({
   display: "swap",
 });
 
+const SITE_URL = "https://khoahocre365.com";
+const TITLE = "Học Rẻ 365 - Share khóa học giá rẻ, uy tín, chất lượng";
+const DESCRIPTION =
+  "Khám phá hàng ngàn khóa học online chất lượng thuộc nhiều lĩnh vực với mức giá tốt, nhận khóa học nhanh chóng và hỗ trợ tận tâm tại Học Rẻ 365.";
+
 export const metadata: Metadata = {
-  title: "Học Rẻ 365 - Share khóa học giá rẻ, uy tín, chất lượng",
-  description: "Khám phá hàng ngàn khóa học online chất lượng thuộc nhiều lĩnh vực với mức giá tốt, nhận khóa học nhanh chóng và hỗ trợ tận tâm tại Học Rẻ 365.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: "%s | Học Rẻ 365",
+  },
+  description: DESCRIPTION,
+  applicationName: "Học Rẻ 365",
+  keywords: ["khóa học giá rẻ", "học online", "khóa học online", "Học Rẻ 365", "combo khóa học", "AI", "marketing", "lập trình"],
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/images/logo-hocre365.png",
+    apple: "/images/logo-hocre365.png",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Học Rẻ 365",
+    url: SITE_URL,
+    title: TITLE,
+    description: DESCRIPTION,
+    locale: "vi_VN",
+    images: [
+      {
+        url: "/images/logo-hocre365.png",
+        width: 1024,
+        height: 1024,
+        alt: "Học Rẻ 365",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/logo-hocre365.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
