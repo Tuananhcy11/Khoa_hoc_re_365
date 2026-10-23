@@ -3,6 +3,7 @@
 import { useState } from "react";
 import siteData from "../../../public/data/siteData.json";
 import { useCourses } from "@/hooks/useCourses";
+import { useWishlist } from "@/components/WishlistProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartModal from "@/components/CartModal";
@@ -23,12 +24,13 @@ export default function TaiKhoanPage() {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
   const { courses } = useCourses();
-  // Demo wishlist: 4 khóa đầu, cho phép gỡ (không dùng effect để tránh render dây chuyền)
-  const [removedWishlist, setRemovedWishlist] = useState<Set<string>>(new Set());
-  const wishlistCourses = courses.slice(0, 4).filter((c) => !removedWishlist.has(c.id));
+  const wishlist = useWishlist();
+  const wishlistCourses = wishlist.ids.length > 0 
+    ? courses.filter((c) => wishlist.has(c.id))
+    : courses.slice(0, 3); // Gợi ý sẵn 3 khóa nếu mới vào
 
   const handleRemoveWishlist = (id: string) => {
-    setRemovedWishlist((prev) => new Set(prev).add(id));
+    wishlist.remove(id);
   };
 
   const handleAddToCart = (course: Course) => {

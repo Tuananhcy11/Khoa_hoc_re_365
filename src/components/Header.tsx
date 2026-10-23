@@ -20,6 +20,7 @@ import { FacebookIcon } from "@/components/icons/FacebookIcon";
 import { siteConfig } from "@/lib/siteConfig";
 import { useCourses } from "@/hooks/useCourses";
 import { useCart } from "@/components/CartProvider";
+import { useWishlist } from "@/components/WishlistProvider";
 import { useSession, signOut } from "next-auth/react";
 import { LogOut } from "lucide-react";
 import type { Category, Course } from "@/types";
@@ -50,6 +51,8 @@ export default function Header({
 
   const { courses: allCourses } = useCourses();
   const cart = useCart();
+  const wishlist = useWishlist();
+  const effectiveWishlistCount = wishlistCount || wishlist.count;
   const { data: session } = useSession();
 
   const searchSuggestions = searchQuery.trim().length > 0
@@ -253,18 +256,19 @@ export default function Header({
             </a>
 
             {/* Wishlist Button */}
-            <button
+            <Link
+              href="/tai-khoan"
               onClick={onOpenWishlist}
               className="relative hidden sm:block p-2.5 rounded-xl bg-[#252a2d] hover:bg-[#30363b] border border-white/10 text-gray-200 hover:text-white transition-colors"
-              title="Khóa học yêu thích"
+              title="Khóa học đã lưu (Yêu thích)"
             >
-              <Heart className="w-5 h-5 text-gray-300" />
-              {wishlistCount > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-[#e11d2e] text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
-                  {wishlistCount}
+              <Heart className="w-5 h-5 text-gray-300 hover:text-red-400 transition-colors" />
+              {effectiveWishlistCount > 0 && (
+                <span className="absolute -top-1.5 -right-1.5 bg-[#e11d2e] text-white text-[10px] font-bold min-w-5 h-5 px-1 rounded-full flex items-center justify-center">
+                  {effectiveWishlistCount}
                 </span>
               )}
-            </button>
+            </Link>
 
             {/* Cart Button */}
             <button

@@ -2,11 +2,14 @@
 
 import { SessionProvider } from "next-auth/react";
 import { CartProvider } from "@/components/CartProvider";
+import { WishlistProvider } from "@/components/WishlistProvider";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <SessionProvider>
-      <CartProvider>{children}</CartProvider>
+      <CartProvider>
+        <WishlistProvider>{children}</WishlistProvider>
+      </CartProvider>
     </SessionProvider>
   );
 }

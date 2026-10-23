@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Star, ShoppingCart, Heart, Check, Flame, Sparkles } from "lucide-react";
 import { useCart } from "@/components/CartProvider";
+import { useWishlist } from "@/components/WishlistProvider";
 import type { Course } from "@/types";
 
 interface CourseCardProps {
@@ -44,6 +45,8 @@ export default function CourseCard({
 }: CourseCardProps) {
   const cart = useCart();
   const inCart = cart.has(course.id);
+  const wishlist = useWishlist();
+  const wished = isWished || wishlist.has(course.id);
   const dark = variant === "dark";
   const sale = parsePrice(course.salePrice);
   const regular = parsePrice(course.regularPrice);
@@ -105,12 +108,15 @@ export default function CourseCard({
           </span>
           <button
             type="button"
-            onClick={() => onToggleWishlist?.(course)}
-            aria-label={isWished ? "Bỏ yêu thích" : "Yêu thích"}
+            onClick={() => {
+              wishlist.toggle(course.id);
+              onToggleWishlist?.(course);
+            }}
+            aria-label={wished ? "Bỏ yêu thích" : "Yêu thích"}
             className={`p-1 rounded-md shrink-0 transition-colors ${dark ? "hover:bg-white/10" : "hover:bg-gray-100"}`}
           >
             <Heart
-              className={`w-4 h-4 ${isWished ? "fill-[#e11d2e] text-[#e11d2e]" : "text-gray-400"}`}
+              className={`w-4 h-4 transition-colors ${wished ? "fill-[#e11d2e] text-[#e11d2e]" : "text-gray-400 hover:text-red-400"}`}
             />
           </button>
         </div>
