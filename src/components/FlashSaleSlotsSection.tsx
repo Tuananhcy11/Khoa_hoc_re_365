@@ -46,20 +46,15 @@ export default function FlashSaleSlotsSection({
             <span className="p-2.5 rounded-xl bg-white/15 text-white animate-pulse">
               <Flame className="w-5 h-5 fill-white" />
             </span>
-            <div>
-              <div className="flex items-center gap-2">
-                <h2 className="text-lg sm:text-xl font-black uppercase text-white leading-tight">
-                  Flash Sale Theo Khung Giờ
-                </h2>
-                {mounted && timer.isActive && (
-                  <span className="bg-[#d5ab3d] text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full uppercase animate-bounce">
-                    Đang diễn ra
-                  </span>
-                )}
-              </div>
-              <p className="text-[11px] text-white/90 mt-0.5">
-                Mở bán chớp nhoáng <strong>1 tiếng</strong> · Nghỉ <strong>1 tiếng</strong> · Vòng lặp liên tục mỗi ngày
-              </p>
+            <div className="flex items-center gap-2">
+              <h2 className="text-xl sm:text-2xl font-black uppercase tracking-wider text-white leading-tight">
+                FLASH SALE
+              </h2>
+              {mounted && timer.isActive && (
+                <span className="bg-[#d5ab3d] text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase animate-bounce">
+                  Đang diễn ra
+                </span>
+              )}
             </div>
           </div>
 
