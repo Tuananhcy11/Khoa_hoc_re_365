@@ -9,9 +9,9 @@ import { Sparkles, ArrowRight, BadgeCheck, CheckCircle2, Search } from "lucide-r
 const popularSearches = ["Claude AI", "Vibe Coding", "Excel", "Tiếng Anh", "Facebook Ads", "Photoshop"];
 
 const promoBanners = [
-  "/images/1_599k_1.webp",
-  "/images/48_special-offer-banner.png",
-  "/images/3_introduce_khgh.webp",
+  "/images/banner_flash_sale.webp",
+  "/images/banner_vip_599k.webp",
+  "/images/banner_ai_coding.webp",
 ];
 
 const toasts = [
